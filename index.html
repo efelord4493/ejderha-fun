@@ -1,0 +1,229 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ejderha.fun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="authScreen" class="auth-shell">
+    <section class="auth-panel">
+      <svg class="login-dragon" viewBox="0 0 760 430" aria-hidden="true">
+        <defs>
+          <linearGradient id="dragonBodyGrad" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#4b1730"/>
+            <stop offset=".48" stop-color="#d23835"/>
+            <stop offset="1" stop-color="#ff8a35"/>
+          </linearGradient>
+          <linearGradient id="dragonBellyGrad" x1="0" x2="1">
+            <stop offset="0" stop-color="#ffe08a"/>
+            <stop offset="1" stop-color="#ff9d45"/>
+          </linearGradient>
+          <linearGradient id="wingGrad" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#5b2460"/>
+            <stop offset=".58" stop-color="#a63862"/>
+            <stop offset="1" stop-color="#ff6b35"/>
+          </linearGradient>
+          <radialGradient id="fireGrad" cx=".5" cy="1" r="1">
+            <stop offset="0" stop-color="#fff3a3"/>
+            <stop offset=".38" stop-color="#ffb13b"/>
+            <stop offset=".7" stop-color="#ff3d2e"/>
+            <stop offset="1" stop-color="rgba(255,61,46,0)"/>
+          </radialGradient>
+          <filter id="dragonGlow" x="-20%" y="-20%" width="140%" height="150%">
+            <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#ff5a2e" flood-opacity=".38"/>
+            <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#ffd166" flood-opacity=".2"/>
+          </filter>
+        </defs>
+
+        <g class="dragon-art">
+          <path class="svg-tail" d="M28 58 C104 8 194 22 256 78 C312 130 250 190 172 172 C116 160 100 208 144 236 C196 270 280 248 330 204"
+            fill="none" stroke="url(#dragonBodyGrad)" stroke-width="34" stroke-linecap="round"/>
+          <path d="M84 38 L106 4 L122 50 L146 14 L154 70 L178 34 L178 92" fill="#ffd166" opacity=".78"/>
+
+          <path class="svg-wing wing-a" d="M292 154 C246 70 178 62 128 118 C182 118 186 164 154 210 C210 188 222 230 198 284 C254 242 286 240 330 294 Z"
+            fill="url(#wingGrad)" stroke="#ffd166" stroke-opacity=".28" stroke-width="3"/>
+          <path class="svg-wing wing-b" d="M376 154 C412 56 498 46 560 118 C502 116 486 166 524 214 C462 186 446 232 474 292 C420 244 396 238 338 294 Z"
+            fill="url(#wingGrad)" stroke="#ffd166" stroke-opacity=".28" stroke-width="3"/>
+          <path d="M154 126 C218 138 250 192 302 272 M518 126 C452 140 420 196 360 272" fill="none" stroke="#2a1023" stroke-width="7" opacity=".45"/>
+          <path d="M196 204 C234 212 264 238 296 276 M478 204 C440 214 410 238 366 276" fill="none" stroke="#ffd166" stroke-width="3" opacity=".28"/>
+
+          <path d="M248 206 C286 126 408 116 468 188 C526 256 476 342 356 348 C254 352 204 286 248 206 Z"
+            fill="url(#dragonBodyGrad)"/>
+          <path d="M290 230 C322 188 392 184 430 230 C414 292 344 318 292 284 C282 266 282 248 290 230 Z"
+            fill="url(#dragonBellyGrad)" opacity=".92"/>
+          <path d="M308 232 L334 224 L360 230 L386 224 L414 236" fill="none" stroke="#7b2a2d" stroke-width="5" opacity=".35"/>
+
+          <path class="svg-neck" d="M434 192 C492 134 574 120 630 158 C674 190 662 242 614 264 C560 290 504 262 486 224"
+            fill="none" stroke="url(#dragonBodyGrad)" stroke-width="54" stroke-linecap="round"/>
+          <path d="M454 170 L472 126 L494 160 L518 112 L540 156 L568 118 L582 168"
+            fill="#ffd166" opacity=".9"/>
+
+          <path class="svg-head" d="M558 126 C604 92 674 112 704 156 L744 174 L710 196 C716 230 684 262 636 260 C586 258 542 226 532 184 C526 160 536 140 558 126 Z"
+            fill="url(#dragonBodyGrad)" stroke="#ffd166" stroke-opacity=".18" stroke-width="3"/>
+          <path d="M574 128 L592 74 L620 124 M642 122 L682 76 L674 138" fill="#ffe08a"/>
+          <path d="M704 156 L752 142 L724 178" fill="#ffe08a"/>
+          <path d="M602 198 C632 216 676 214 704 194" fill="none" stroke="#2a1023" stroke-width="8" stroke-linecap="round"/>
+          <path d="M610 204 L626 236 L642 208 L660 238 L674 206" fill="#fff4ca"/>
+          <ellipse cx="638" cy="158" rx="12" ry="15" fill="#fff4ca"/>
+          <ellipse cx="642" cy="158" rx="5" ry="11" fill="#141018"/>
+          <path d="M612 148 C626 136 648 136 660 150" fill="none" stroke="#2a1023" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="706" cy="180" r="5" fill="#2a1023"/>
+
+          <path class="svg-fire" d="M702 92 C722 66 716 34 742 12 C742 44 772 56 754 94 C780 80 796 98 784 122 C770 152 728 152 706 128 C692 114 692 102 702 92 Z"
+            fill="url(#fireGrad)"/>
+          <path class="svg-fire inner" d="M724 104 C738 82 734 62 750 44 C752 70 770 82 758 110 C746 132 722 130 724 104 Z"
+            fill="#fff1a0" opacity=".82"/>
+
+          <g opacity=".55">
+            <circle cx="292" cy="176" r="6" fill="#ffd166"/>
+            <circle cx="326" cy="158" r="5" fill="#ffd166"/>
+            <circle cx="368" cy="154" r="6" fill="#ffd166"/>
+            <circle cx="408" cy="168" r="5" fill="#ffd166"/>
+            <circle cx="478" cy="190" r="5" fill="#ffd166"/>
+            <circle cx="520" cy="174" r="5" fill="#ffd166"/>
+          </g>
+        </g>
+      </svg>
+      <div>
+        <p class="eyebrow">15 kisilik ejderha ekonomisi</p>
+        <h1>ejderha.fun</h1>
+        <p class="muted">Zor ekonomi, pahali kozmetikler, kulup savaslari ve rebirth yarisi.</p>
+      </div>
+
+      <form id="authForm" class="auth-form" novalidate>
+        <label>
+          Oyuncu adi
+          <input id="nameInput" minlength="3" maxlength="18" autocomplete="username" placeholder="En az 3 karakter">
+        </label>
+        <label>
+          Sifre
+          <input id="passwordInput" type="password" minlength="5" autocomplete="current-password" placeholder="En az 5 karakter">
+        </label>
+        <label>
+          Profil fotografi <span class="optional">istege bagli</span>
+          <input id="avatarInput" type="file" accept="image/*">
+        </label>
+        <button class="primary dragon-button" type="submit">Oyuna gir</button>
+        <button id="resetSaveButton" class="reset-button" type="button">Kayitlari sifirla</button>
+        <p id="authMessage" class="message"></p>
+      </form>
+    </section>
+  </main>
+
+  <main id="gameScreen" class="game-shell hidden">
+    <aside class="sidebar">
+      <section class="profile-card">
+        <div id="avatarFrame" class="avatar-frame">
+          <img id="playerAvatar" alt="Profil fotografi" class="avatar">
+        </div>
+        <div>
+          <button id="playerName" class="name-button"></button>
+          <p id="playerTag" class="tag"></p>
+        </div>
+      </section>
+
+      <section class="stat-grid">
+        <div><span>Para</span><strong id="moneyValue">0 TL</strong></div>
+        <div><span>Gelir</span><strong id="incomeValue">1 TL/sn</strong></div>
+        <div><span>Rebirth</span><strong id="rebirthValue">0</strong></div>
+        <div><span>Siralamam</span><strong id="rankValue">-</strong></div>
+      </section>
+
+      <button id="rebirthButton" class="rebirth-button dragon-button"></button>
+      <button id="logoutButton" class="ghost">Cikis yap</button>
+    </aside>
+
+    <section class="center-stage">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Kazanc merkezi</p>
+          <h2>Gelirini buyut</h2>
+        </div>
+        <div id="rankBonus" class="rank-bonus"></div>
+      </header>
+
+      <section class="super-market">
+        <div>
+          <p class="eyebrow">Super Market</p>
+          <h2>Para basma tezgahi</h2>
+          <p id="superMarketText" class="muted"></p>
+        </div>
+        <button id="superMarketButton" class="market-button"></button>
+      </section>
+
+      <section id="incomeShop" class="shop-grid"></section>
+      <section class="reward-road">
+        <div>
+          <p class="eyebrow">Rebirth yolu</p>
+          <h2>Her 10 rebirthte odul</h2>
+        </div>
+        <div id="rebirthRoad" class="road-list"></div>
+      </section>
+    </section>
+
+    <aside class="right-rail">
+      <section>
+        <div class="section-title">
+          <h2>Skor</h2>
+          <span>1: 10x | 2: 5x | 3: 2x</span>
+        </div>
+        <div class="tabs">
+          <button class="tab active" data-board="money">Para</button>
+          <button class="tab" data-board="rebirth">Rebirth</button>
+          <button class="tab" data-board="club">Kulup</button>
+        </div>
+        <div id="leaderboard" class="leaderboard"></div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2>Kulup</h2>
+          <span id="clubSummary">Kulupsuz</span>
+        </div>
+        <div id="clubInfo" class="club-info"></div>
+        <form id="clubForm" class="club-form">
+          <input id="clubNameInput" maxlength="18" placeholder="Kulup adi (kurmak icin)">
+          <input id="clubPasswordInput" maxlength="18" placeholder="Sifre (kur veya katil)">
+          <input id="clubAvatarInput" type="file" accept="image/*">
+          <button type="button" id="createClubButton">Kur</button>
+        </form>
+        <div id="clubList" class="club-list"></div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2>Market</h2>
+          <span>Kalici gorunumler</span>
+        </div>
+        <div id="cosmeticShop" class="cosmetic-list"></div>
+      </section>
+
+      <section class="chat-panel">
+        <div class="section-title">
+          <h2>Chat</h2>
+          <span id="playerCount">0/15</span>
+        </div>
+        <div class="tabs">
+          <button class="tab active" data-chat="global">Genel</button>
+          <button class="tab" data-chat="club">Kulup</button>
+        </div>
+        <div id="chatLog" class="chat-log"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" maxlength="140" placeholder="Mesaj yaz">
+          <button type="submit">Gonder</button>
+        </form>
+      </section>
+    </aside>
+  </main>
+
+  <dialog id="profileDialog">
+    <button id="closeProfile" class="close-button">x</button>
+    <div id="profileDetails"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
