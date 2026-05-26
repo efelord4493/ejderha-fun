@@ -1,0 +1,44 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import {
+  getDatabase,
+  ref,
+  set,
+  onValue,
+  push,
+  onChildAdded
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+// 🔥 SENİN FIREBASE AYARIN
+const firebaseConfig = {
+  apiKey: "BURAYA_YAZ",
+  authDomain: "ejderha-a7e47.firebaseapp.com",
+  databaseURL: "https://ejderha-a7e47-default-rtdb.firebaseio.com/",
+  projectId: "ejderha-a7e47"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+// 👤 oyuncu güncelle
+export function updatePlayer(id, data) {
+  set(ref(db, "players/" + id), data);
+}
+
+// 💬 mesaj gönder
+export function sendMessage(msg) {
+  push(ref(db, "chat"), msg);
+}
+
+// 💬 mesajları dinle
+export function listenChat(callback) {
+  onChildAdded(ref(db, "chat"), (snap) => {
+    callback(snap.val());
+  });
+}
+
+// 👥 oyuncuları dinle
+export function listenPlayers(callback) {
+  onValue(ref(db, "players"), (snap) => {
+    callback(snap.val() || {});
+  });
+}
