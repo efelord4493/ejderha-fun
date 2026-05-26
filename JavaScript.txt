@@ -1,0 +1,15 @@
+listenChat((msg) => {
+  console.log(msg.name + ": " + msg.text);
+});
+sendMessage({
+  name: username,
+  text: "selam",
+  time: Date.now()
+});
+updatePlayer(playerId, {
+  name: username,
+  score: money,
+  x: 0,
+  y: 0
+});
+}
