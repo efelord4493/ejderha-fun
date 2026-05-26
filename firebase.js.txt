@@ -8,37 +8,29 @@ import {
   onChildAdded
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-// 🔥 SENİN FIREBASE AYARIN
 const firebaseConfig = {
-  apiKey: "BURAYA_YAZ",
+  apiKey: "AIzaSyAuOsJYOrXdXj_GBzvgzOLEpzBp8BKAVIU",
   authDomain: "ejderha-a7e47.firebaseapp.com",
-  databaseURL: "https://ejderha-a7e47-default-rtdb.firebaseio.com/",
-  projectId: "ejderha-a7e47"
+  databaseURL: "https://ejderha-a7e47-default-rtdb.firebaseio.com",
+  projectId: "ejderha-a7e47",
+  appId: "1:985795860958:web:afe91b2976521bc99ee54f"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-// 👤 oyuncu güncelle
 export function updatePlayer(id, data) {
   set(ref(db, "players/" + id), data);
 }
 
-// 💬 mesaj gönder
 export function sendMessage(msg) {
   push(ref(db, "chat"), msg);
 }
 
-// 💬 mesajları dinle
-export function listenChat(callback) {
-  onChildAdded(ref(db, "chat"), (snap) => {
-    callback(snap.val());
-  });
+export function listenChat(cb) {
+  onChildAdded(ref(db, "chat"), snap => cb(snap.val()));
 }
 
-// 👥 oyuncuları dinle
-export function listenPlayers(callback) {
-  onValue(ref(db, "players"), (snap) => {
-    callback(snap.val() || {});
-  });
+export function listenPlayers(cb) {
+  onValue(ref(db, "players"), snap => cb(snap.val() || {}));
 }
